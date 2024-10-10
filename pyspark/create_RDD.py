@@ -29,11 +29,40 @@ v=spark.sparkContext
 
 
 k=[12,13,14,15]
-
+l=[2,3,4,5]
 h=v.parallelize(k)
-g=h.map(lambda x:x**3)
-s=g.collect()
-print(s)
+m=v.parallelize(l)
 
-j
+zip_rdd=h.zip(m)
+
+print(zip_rdd.collect())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
