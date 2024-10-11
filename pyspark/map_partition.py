@@ -20,11 +20,20 @@ a=spark.sparkContext
 
 
 
-l=[1,2,3,4,5,6,7,8,9]
+# l=[1,2,3,4,5,6,7,8,9]
+#
+# v=a.parallelize(l,2)
+#
+# z=v.mapPartitionsWithIndex(lambda idx, partition:(idx,sum(partition))).collect()
+#
+# print(z)
 
-v=a.parallelize(l,2)
 
-z=v.mapPartitionsWithIndex(lambda idx, partition:(idx,sum(partition))).collect()
+k=[1,2,3,4,5,6,7,8,9]
+h=a.parallelize(k)
+def sap(x):
+    return (x*2 for x in k)
 
-print(z)
+b=h.mapPartitions(sap).collect()
 
+print(b)
