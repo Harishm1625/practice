@@ -1,4 +1,4 @@
-from pyspark.python.pyspark.shell import spark
+from practice.pyspark.stringfunction import spark
 
 a=spark.sparkContext
 

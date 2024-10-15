@@ -8,3 +8,6 @@ s=a.parallelize(snt)
 
 k=s.flatMap(lambda line:line.split("a")).collect()
 print(k)
+
+
+

@@ -26,14 +26,14 @@ s=a1.select("name").show()
 # columns = ["id", "name", "product"]
 # df = spark.createDataFrame(data, columns)
 #
-# # Dataframe Functions:
-#
-# # res=df.select("name").show()    --select
-# # res=df.filter(df["id"]>1).show()  --Filter
-# # res=df.where(df["id"]<3).show()   --Where
-# # res=df.filter(df["name"].like("%e")).show() --LIKE
-#
-# # res=df.withColumn('Salary',when(df["id"]==1,"1000").otherwise("2000")).show() ---When & Otherwise
-# # res=df.describe().show() ----describe()
-# # res=df.groupBy("product").sum("id").orderBy("product",desc).show()
-#
+# Dataframe Functions:
+
+# res=df.select("name").show()    --select
+# res=df.filter(df["id"]>1).show()  --Filter
+# res=df.where(df["id"]<3).show()   --Where
+# res=df.filter(df["name"].like("%e")).show() --LIKE
+
+# res=df.withColumn('Salary',when(df["id"]==1,"1000").otherwise("2000")).show() ---When & Otherwise
+# res=df.describe().show() ----describe()
+# res=df.groupBy("product").sum("id").orderBy("product",desc).show()
+
