@@ -7,3 +7,4 @@ df = spark.createDataFrame(data, ["name", "age"])
 res=df.groupBy("name").agg(count_distinct("age").alias("Total"))
 
 res.show()
+
